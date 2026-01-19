@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SaaS Landing Page - Modern Business Template",
+  title: "Landing Page Sample by Jameson Olitoquit",
   description: "A high-conversion landing page template for SaaS products and startups, featuring modern design, testimonials, pricing, and demo sections.",
   icons: {
     icon: '/favicon.svg',
