@@ -245,7 +245,7 @@ export default function Demo() {
                   </h3>
                   <p className="mb-6 opacity-90">
                     While you wait for your demo, check out this quick overview
-                    of our platform's key features.
+                    of our platform&apos;s key features.
                   </p>
                   <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg px-6 py-3 font-semibold transition-all duration-300 flex items-center gap-2">
                     <Play className="w-5 h-5" />

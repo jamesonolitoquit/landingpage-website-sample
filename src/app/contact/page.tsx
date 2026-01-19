@@ -73,7 +73,7 @@ export default function Contact() {
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Have questions about our platform? Need help getting started?
-                We're here to help. Reach out to our friendly team.
+                We&apos;re here to help. Reach out to our friendly team.
               </p>
             </motion.div>
 
@@ -177,7 +177,7 @@ export default function Contact() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Thank you for reaching out! We've received your message and will get back to you within 24 hours.
+                      Thank you for reaching out! We&apos;ve received your message and will get back to you within 24 hours.
                     </p>
                     <p className="text-sm text-gray-500">
                       Check your email for a confirmation.

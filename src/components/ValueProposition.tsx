@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { CheckCircle, Zap, Shield, Users } from "lucide-react";
+import { Zap, Shield, Users } from "lucide-react";
 
 export function ValueProposition() {
   const benefits = [

@@ -2,7 +2,7 @@
 
 import { PageLayout } from "@/components/PageLayout";
 import { motion } from "framer-motion";
-import { Target, Users, Award, Heart, Globe, TrendingUp } from "lucide-react";
+import { Target, Users, Award, Heart, Globe } from "lucide-react";
 
 export default function About() {
   const values = [
@@ -74,7 +74,7 @@ export default function About() {
                 About Our Company
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                We're on a mission to empower teams worldwide with innovative tools
+                We&apos;re on a mission to empower teams worldwide with innovative tools
                 that make software development faster, easier, and more collaborative.
               </p>
             </motion.div>
@@ -197,7 +197,7 @@ export default function About() {
                 Join Our Mission
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Be part of something bigger. Let's build the future of software development together.
+                Be part of something bigger. Let&apos;s build the future of software development together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

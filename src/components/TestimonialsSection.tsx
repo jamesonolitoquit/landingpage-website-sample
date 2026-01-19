@@ -47,7 +47,7 @@ export function TestimonialsSection() {
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Don't just take our word for it. Here's what industry leaders and teams
+              Don&apos;t just take our word for it. Here&apos;s what industry leaders and teams
               around the world are saying about our platform.
             </p>
           </motion.div>
@@ -77,7 +77,7 @@ export function TestimonialsSection() {
 
                 {/* Content */}
                 <p className="text-gray-700 leading-relaxed mb-6 italic">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
 
                 {/* Author */}
