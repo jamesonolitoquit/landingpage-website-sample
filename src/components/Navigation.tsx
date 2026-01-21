@@ -40,8 +40,7 @@ export function Navigation() {
     { name: "Pricing", href: "/pricing" },
     { name: "Demo", href: "/demo" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Profile", href: "/profile" }
+    { name: "Contact", href: "/contact" }
   ];
 
   return (

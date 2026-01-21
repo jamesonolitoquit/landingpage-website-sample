@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Settings() {
   return (
     <PageLayout>
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">

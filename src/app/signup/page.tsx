@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function Signup() {
   return (
     <PageLayout>
-      <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8">
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full mx-auto space-y-8">
           <div>
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">LP</span>
