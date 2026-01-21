@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isLoggedIn } = useAuth();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -15,6 +17,17 @@ export function Navigation() {
     { name: "Demo", href: "/demo" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
+  ];
+
+  const authenticatedNavItems = [
+    { name: "Home", href: "/" },
+    { name: "Features", href: "/features" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Demo", href: "/demo" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Profile", href: "/profile" },
+    { name: "Settings", href: "/settings" }
   ];
 
   return (
@@ -34,7 +47,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {(isLoggedIn ? authenticatedNavItems : navItems).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -47,18 +60,29 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/pricing"
-              className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/demo"
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
-            >
-              Get Started
-            </Link>
+            {isLoggedIn ? (
+              <Link
+                href="/profile"
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
+              >
+                Profile
+              </Link>
+            ) : (
+              <>
+                <Link
+                  href="/pricing"
+                  className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/demo"
+                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
+                >
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -159,31 +183,64 @@ export function Navigation() {
                   <span className="text-xs text-gray-600 font-medium">Contact</span>
                 </Link>
 
-                {/* Sign In */}
-                <Link
-                  href="/pricing"
-                  className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                  title="Sign In"
-                >
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <span className="text-xs text-gray-600 font-medium">Sign In</span>
-                </Link>
+                {isLoggedIn ? (
+                  <>
+                    {/* Profile */}
+                    <Link
+                      href="/profile"
+                      className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                      title="Profile"
+                    >
+                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <span className="text-xs text-gray-600 font-medium">Profile</span>
+                    </Link>
 
-                {/* Get Started */}
-                <Link
-                  href="/demo"
-                  className="flex flex-col items-center space-y-1 p-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-colors"
-                  onClick={() => setIsOpen(false)}
-                  title="Get Started"
-                >
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                  <span className="text-xs text-white font-medium">Get Started</span>
-                </Link>
+                    {/* Settings */}
+                    <Link
+                      href="/settings"
+                      className="flex flex-col items-center space-y-1 p-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-colors"
+                      onClick={() => setIsOpen(false)}
+                      title="Settings"
+                    >
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span className="text-xs text-white font-medium">Settings</span>
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    {/* Sign In */}
+                    <Link
+                      href="/pricing"
+                      className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                      title="Sign In"
+                    >
+                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <span className="text-xs text-gray-600 font-medium">Sign In</span>
+                    </Link>
+
+                    {/* Get Started */}
+                    <Link
+                      href="/demo"
+                      className="flex flex-col items-center space-y-1 p-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-colors"
+                      onClick={() => setIsOpen(false)}
+                      title="Get Started"
+                    >
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                      <span className="text-xs text-white font-medium">Get Started</span>
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>
