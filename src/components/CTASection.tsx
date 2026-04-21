@@ -23,7 +23,7 @@ export function CTASection() {
           >
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
-              Limited Time Offer
+              Quote-ready conversion section
             </div>
           </motion.div>
 
@@ -34,7 +34,7 @@ export function CTASection() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
           >
-            Ready to Transform Your Workflow?
+            Ready to capture more leads from your landing page?
           </motion.h2>
 
           <motion.p
@@ -44,8 +44,8 @@ export function CTASection() {
             viewport={{ once: true }}
             className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Join thousands of teams already using our platform to build faster,
-            scale smarter, and deliver exceptional results.
+            This sample uses a clear CTA stack to show how a visitor can move from package comparison,
+            to quote request, to booking with minimal friction.
           </motion.p>
 
           <motion.div
@@ -56,12 +56,12 @@ export function CTASection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a href="/pricing" className="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2">
-              Start Free Trial
+              Compare Packages
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a href="/demo" className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
-              Schedule Demo
+              Request Quote
             </a>
           </motion.div>
 
@@ -72,7 +72,7 @@ export function CTASection() {
             viewport={{ once: true }}
             className="mt-12 text-blue-100 text-sm"
           >
-            <p>No credit card required • 14-day free trial • Cancel anytime</p>
+            <p>No obligation • Fast response • Easy next-step booking</p>
           </motion.div>
         </div>
       </div>

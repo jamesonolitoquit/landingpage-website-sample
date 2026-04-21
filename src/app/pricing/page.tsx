@@ -70,11 +70,10 @@ export default function Pricing() {
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Simple, Transparent Pricing
+                Simple packages for quote-driven bookings
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Choose the perfect plan for your team. All plans include our core features
-                with no hidden fees or surprise charges.
+                The pricing page now works as a package comparison step before a quote or booking action.
               </p>
             </motion.div>
 
@@ -125,7 +124,7 @@ export default function Pricing() {
                           : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                       }`}
                     >
-                      {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
+                      {plan.name === 'Enterprise' ? 'Contact Sales' : 'Request Quote'}
                     </Link>
                   </div>
                 </motion.div>
@@ -140,43 +139,39 @@ export default function Pricing() {
               className="bg-white rounded-2xl p-8 shadow-lg"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                Frequently Asked Questions
+                Questions people ask before booking
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Can I change plans anytime?
+                    Can I request a custom quote?
                   </h3>
                   <p className="text-gray-600">
-                    Yes, you can upgrade or downgrade your plan at any time.
-                    Changes take effect immediately.
+                    Yes, the demo is designed so visitors can move from pricing into a quote request or booking step.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Is there a free trial?
+                    Is there a booking handoff?
                   </h3>
                   <p className="text-gray-600">
-                    Yes, all plans come with a 14-day free trial.
-                    No credit card required to get started.
+                    Yes, each path can route users to a booking CTA, estimate request, or contact form.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    What payment methods do you accept?
+                    What if I need something custom?
                   </h3>
                   <p className="text-gray-600">
-                    We accept all major credit cards, PayPal, and bank transfers
-                    for enterprise customers.
+                    Custom work can be handled through the demo/quote flow without needing to fit one fixed package.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Do you offer refunds?
+                    Does this show portfolio value?
                   </h3>
                   <p className="text-gray-600">
-                    Yes, we offer a 30-day money-back guarantee on all plans.
-                    Contact support for assistance.
+                    Yes, it demonstrates conversion structure, package presentation, and lead capture flow.
                   </p>
                 </div>
               </div>

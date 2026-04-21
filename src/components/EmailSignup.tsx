@@ -37,11 +37,10 @@ export function EmailSignup() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Stay Updated with Our Latest Features
+              Get a quick estimate or callback
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Get exclusive access to beta features, product updates, and insider tips
-              delivered straight to your inbox.
+              This block demonstrates a lightweight lead-capture step that can feed a quote or booking workflow.
             </p>
           </motion.div>
 
@@ -74,7 +73,7 @@ export function EmailSignup() {
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                   ) : (
                     <>
-                      Subscribe
+                      Request Estimate
                       <ArrowRight className="w-5 h-5" />
                     </>
                   )}
@@ -87,8 +86,8 @@ export function EmailSignup() {
                 className="text-center p-8 bg-green-500/20 border border-green-500/30 rounded-xl backdrop-blur-sm"
               >
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Thank you for subscribing!</h3>
-                <p className="text-gray-300">Check your email for confirmation and welcome updates.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Thanks, we’ll follow up shortly.</h3>
+                <p className="text-gray-300">Your estimate request has been received and the next step is ready to book.</p>
               </motion.div>
             )}
           </motion.div>
@@ -101,7 +100,7 @@ export function EmailSignup() {
             className="mt-12 text-center"
           >
             <p className="text-gray-400 text-sm">
-              We respect your privacy. Unsubscribe at any time.
+              We respect your privacy. No spam, only next-step follow-up.
             </p>
           </motion.div>
         </div>

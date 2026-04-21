@@ -69,11 +69,11 @@ export default function Contact() {
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Get in Touch
+                Book a call or request a quote
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Have questions about our platform? Need help getting started?
-                We&apos;re here to help. Reach out to our friendly team.
+                Use this page as the final conversion step: visitors can request a quote,
+                schedule a demo, or ask for a custom proposal.
               </p>
             </motion.div>
 
@@ -88,7 +88,7 @@ export default function Contact() {
                 {!isSubmitted ? (
                   <>
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      Send us a message
+                      Tell us what you need
                     </h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
@@ -124,7 +124,7 @@ export default function Contact() {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Subject *
+                          Request type *
                         </label>
                         <select
                           name="subject"
@@ -135,16 +135,16 @@ export default function Contact() {
                         >
                           <option value="">Select a subject</option>
                           <option value="general">General Inquiry</option>
-                          <option value="support">Technical Support</option>
-                          <option value="sales">Sales Question</option>
-                          <option value="partnership">Partnership</option>
+                          <option value="support">Booking Help</option>
+                          <option value="sales">Quote Request</option>
+                          <option value="partnership">Custom Project</option>
                           <option value="other">Other</option>
                         </select>
                       </div>
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Message *
+                          Project details *
                         </label>
                         <textarea
                           name="message"
@@ -153,7 +153,7 @@ export default function Contact() {
                           required
                           rows={6}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Tell us how we can help you..."
+                          placeholder="Tell us about your timeline, budget, and what you want the form to achieve..."
                         />
                       </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                       >
                         <Send className="w-5 h-5" />
-                        Send Message
+                        Request Follow-Up
                       </button>
                     </form>
                   </>
@@ -174,10 +174,10 @@ export default function Contact() {
                   >
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      Message Sent Successfully!
+                      Request Sent Successfully!
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Thank you for reaching out! We&apos;ve received your message and will get back to you within 24 hours.
+                      Thank you for reaching out! We&apos;ve received your request and will follow up with the next step within 24 hours.
                     </p>
                     <p className="text-sm text-gray-500">
                       Check your email for a confirmation.
@@ -222,12 +222,12 @@ export default function Contact() {
                       <p className="text-blue-100">We typically respond within 24 hours during business days.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Do you offer phone support?</h4>
-                      <p className="text-blue-100">Yes, our support team is available by phone during business hours.</p>
+                      <h4 className="font-semibold mb-1">Can I schedule a call?</h4>
+                      <p className="text-blue-100">Yes, use this form to request a quote or a booking follow-up.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Can I schedule a call?</h4>
-                      <p className="text-blue-100">Absolutely! Use our demo booking form for personalized assistance.</p>
+                      <h4 className="font-semibold mb-1">Can I request a custom estimate?</h4>
+                      <p className="text-blue-100">Absolutely. The page is designed to capture high-intent requests with minimal friction.</p>
                     </div>
                   </div>
                 </div>

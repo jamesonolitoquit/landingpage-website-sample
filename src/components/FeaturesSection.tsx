@@ -7,38 +7,38 @@ export function FeaturesSection() {
   const features = [
     {
       icon: Code,
-      title: "Advanced Development Tools",
-      description: "Powerful IDE with intelligent code completion, debugging, and version control integration.",
+      title: "Quote Calculator Flow",
+      description: "Guide visitors through a simple estimate path before they book or contact.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Database,
-      title: "Scalable Database Solutions",
-      description: "High-performance databases that grow with your business, ensuring data integrity and speed.",
+      title: "Plan Comparison",
+      description: "Show tiered packages, pricing anchors, and clear feature differences.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
       icon: Cloud,
-      title: "Cloud-Native Architecture",
-      description: "Deploy anywhere with our cloud-first approach, ensuring reliability and global reach.",
+      title: "Booking CTA System",
+      description: "Make it obvious what happens after the quote: book, call, or request follow-up.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: Smartphone,
-      title: "Mobile-First Design",
-      description: "Responsive interfaces that work perfectly across all devices and screen sizes.",
+      title: "Mobile-First Funnel",
+      description: "Keep the quote and booking experience easy to scan on smaller screens.",
       gradient: "from-orange-500 to-red-500"
     },
     {
       icon: Lock,
-      title: "Enterprise Security",
-      description: "Bank-level security with end-to-end encryption and compliance certifications.",
+      title: "Trust and Assurance",
+      description: "Add guarantees, social proof, and response-time expectations where they matter.",
       gradient: "from-indigo-500 to-blue-500"
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics",
-      description: "Real-time insights and reporting to help you make data-driven decisions.",
+      title: "Conversion Signals",
+      description: "Use stats and structured content to show the page is built to convert, not just look good.",
       gradient: "from-teal-500 to-green-500"
     }
   ];
@@ -56,11 +56,11 @@ export function FeaturesSection() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Powerful Features for Modern Teams
+              Features that support a booking decision
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Everything you need to build, deploy, and scale your applications with confidence.
-              Our comprehensive platform covers all aspects of modern software development.
+              This section shows how a landing page can answer pricing, trust, mobile usability,
+              and next-step questions in one place.
             </p>
           </motion.div>
 
@@ -93,10 +93,10 @@ export function FeaturesSection() {
             className="text-center mt-16"
           >
             <p className="text-lg text-gray-600 mb-6">
-              Ready to experience these features firsthand?
+              Ready to see the quote flow in action?
             </p>
             <a href="/demo" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Start Free Trial
+              Start Quote Flow
             </a>
           </motion.div>
         </div>

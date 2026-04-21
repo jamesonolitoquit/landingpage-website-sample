@@ -7,18 +7,18 @@ export function ValueProposition() {
   const benefits = [
     {
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Get results in minutes, not hours"
+      title: "Instant Qualification",
+      description: "Let visitors identify the right package in seconds"
     },
     {
       icon: Shield,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security you can trust"
+      title: "Trust Signals",
+      description: "Show reviews, guarantees, and clear next steps"
     },
     {
       icon: Users,
-      title: "Team Collaboration",
-      description: "Work together seamlessly from anywhere"
+      title: "Booking Ready",
+      description: "Move from interest to contact or booking without friction"
     }
   ];
 
@@ -35,11 +35,11 @@ export function ValueProposition() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Our Platform?
+              Why this landing page works for portfolio proof
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference with our innovative solution that combines cutting-edge technology
-              with intuitive design to deliver exceptional results for your business.
+              The layout shows how to guide a visitor from curiosity to quote or booking with a structured flow,
+              clear hierarchy, and strong calls to action.
             </p>
           </motion.div>
 
@@ -73,19 +73,19 @@ export function ValueProposition() {
           >
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime</div>
+              <div className="text-gray-600">Clarity</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-purple-600 mb-2">10K+</div>
-              <div className="text-gray-600">Users</div>
+              <div className="text-gray-600">Visitors Guided</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support</div>
+              <div className="text-gray-600">Booking Access</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-orange-600 mb-2">5★</div>
-              <div className="text-gray-600">Rating</div>
+              <div className="text-gray-600">Portfolio Value</div>
             </div>
           </motion.div>
         </div>
